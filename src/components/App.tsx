@@ -10,12 +10,10 @@ export class App extends React.Component {
         const tab = tabs[0];
         chrome.tabs.sendMessage(tab.id || 0, { from: "popup", subject: tab }, response => {
           name = response.name;
-          console.log(name);
         });
       });
     }
   }
-
   render() {
     return <div className="app">{name}</div>;
   }

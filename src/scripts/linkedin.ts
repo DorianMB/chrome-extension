@@ -10,6 +10,7 @@ chrome.runtime.onMessage.addListener(async (msg, sender, response) => {
       document: document
     };
     console.log('lol', res[0].innerHTML.toString().replace("[\\r\\n]+", ""), document);
+    res[0].innerHTML = "Dommage j'ai pas réussi a faire mieux !";
     response(result);
   }
 
